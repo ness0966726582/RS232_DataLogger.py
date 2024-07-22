@@ -1,0 +1,42 @@
+開始 (Start)
+  |
+  v
+導入庫 (Import libraries) (serial, time)
+  |
+  v
+配置串行端口 (Configure serial port) (COM1, 9600 baud, 1s timeout)
+  |
+  v
+生成檔名 (Generate filename) with timestamp
+  |
+  v
+打開串行端口 (Open serial port)
+  |
+  v
+打開文件 (Open file for writing) (filename with timestamp)
+  |
+  v
+進入無限循環 (Enter infinite loop)
+  |   |
+  |   v
+  | 讀取數據 (Read data from serial port)
+  |   |
+  | 如果有數據 (If data available):
+  |   |
+  |   v
+  | 將數據寫入文件 (Write data with timestamp to file)
+  |   |
+  |   v
+  | 打印數據 (Print data to console)
+  |   |
+  v   v
+ 處理鍵盤中斷 (Handle KeyboardInterrupt) (Ctrl+C)
+  |   |
+  v   v
+ 打印 "數據收集已停止" (Print "Data collection stopped")
+  |
+  v
+關閉串行端口 (Close serial port)
+  |
+  v
+結束 (End)
